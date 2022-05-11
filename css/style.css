@@ -232,3 +232,20 @@ ul {
     width: 100%;
   }
 }
+
+/* Footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 12px 6px;
+  color: var(--colors-white);
+  background-color: var(--colors-dark-magenta);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+footer a {
+  color: inherit;
+}
+footer a:hover {
+  color: var(--colors-soft-pink);
+}
