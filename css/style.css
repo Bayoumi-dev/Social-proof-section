@@ -87,6 +87,7 @@ ul {
   padding: 18px 32px;
   font-size: 0.867rem;
   font-weight: 700;
+  color: var(--colors-dark-magenta);
   background-color: var(--colors-light-grayish-magenta);
   border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -238,8 +239,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 12px 6px;
-  color: var(--colors-white);
-  background-color: var(--colors-dark-magenta);
+  color: var(--colors-dark-magenta);
   font-size: 0.8rem;
   font-weight: 700;
 }
