@@ -1,5 +1,20 @@
-/* Google Font - League Spartan */
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+/* Google Font - Spartan */
+@font-face {
+  font-family: "Spartan";
+  src: url(../font/Spartan-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Spartan";
+  src: url(../font/Spartan-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Spartan";
+  src: url(../font/Spartan-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
 /* Variables */
 :root {
   /* Colors - Primary */
@@ -11,7 +26,7 @@
   --colors-white: hsl(0, 0%, 100%);
 
   /* Fonts */
-  --fonts-main: 'League Spartan', sans-serif;
+  --fonts-main: "Spartan", sans-serif;
 }
 /* Global Rules  */
 *,
@@ -35,12 +50,185 @@ ul {
   list-style: none;
 }
 
-/* Centering component */
-main {
+/* Social proof section */
+.social-proof {
+  background: url(../images/bg-pattern-top-desktop.svg) top left no-repeat,
+    url(../images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+}
+.social-proof__container {
+  max-width: 1206px;
+  min-height: 100vh;
+  padding: 127px 48px;
+  margin: auto;
+}
+.social-proof__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-proof__heading {
+  max-width: 445px;
+}
+.social-proof__heading h1 {
+  font-size: 3.2rem;
+  line-height: 1;
+  letter-spacing: -1.71429px;
+  color: var(--colors-dark-magenta);
+  margin-bottom: 12px;
+}
+.social-proof__heading p {
+  color: var(--colors-dark-grayish-magenta);
+  font-weight: 500;
+  line-height: 1.667;
+  letter-spacing: -0.5px;
+}
+.social-proof__ratings li {
+  width: 445px;
+  padding: 18px 32px;
+  font-size: 0.867rem;
+  font-weight: 700;
+  background-color: var(--colors-light-grayish-magenta);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.social-proof__ratings li:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+.social-proof__ratings li:first-of-type {
+  margin-left: 15px;
+}
+.social-proof__ratings li:nth-of-type(2) {
+  margin-left: 63px;
+}
+.social-proof__ratings li:last-of-type {
+  margin-left: 110px;
+}
+.social-proof__ratings li::before {
+  content: "";
+  width: 117px;
+  height: 16px;
+  margin-right: 32px;
+  display: inline-block;
+  background: url(../images/icon-star.svg) no-repeat,
+    url(../images/icon-star.svg) 25px no-repeat,
+    url(../images/icon-star.svg) 50px no-repeat,
+    url(../images/icon-star.svg) 75px no-repeat,
+    url(../images/icon-star.svg) 100px no-repeat;
+}
+.social-proof__feedbacks {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 72px;
+}
+.social-proof__feedback {
+  max-width: 350px;
+  height: 234px;
+  padding: 40px 32px;
+  color: white;
+  background-color: var(--colors-dark-magenta);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.social-proof__feedback:nth-of-type(2) {
+  margin-top: 16px;
+}
+.social-proof__feedback:last-of-type {
+  margin-top: 32px;
+}
+.social-proof__feedback .buyer-info {
+  display: flex;
   align-items: center;
-  min-height: 100vh;
-  padding: 24px;
-  background-color: var();
+}
+.social-proof__feedback .buyer-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 23px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+}
+.social-proof__feedback .buyer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.social-proof__feedback .buyer-name {
+  display: block;
+  font-size: 0.867rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.social-proof__feedback .buyer-state {
+  font-size: 0.867rem;
+  color: var(--colors-soft-pink);
+}
+.social-proof__feedback .buyer-feedback {
+  font-size: 0.867rem;
+  font-weight: 500;
+  line-height: 1.692;
+  letter-spacing: -0.232143px;
+  margin-top: 26px;
+}
+/* The social proof section is 
+   responsive on all different devices */
+@media (max-width: 992px) {
+  .social-proof__container {
+    padding: 80px 48px;
+  }
+  .social-proof__top {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .social-proof__heading h1 {
+    margin-bottom: 24px;
+  }
+  .social-proof__ratings {
+    margin-top: 40px;
+  }
+  .social-proof__feedback {
+    height: auto;
+    margin: 0 !important;
+  }
+}
+@media (max-width: 768px) {
+  .social-proof {
+    background: url(../images/bg-pattern-top-mobile.svg) top left no-repeat,
+      url(../images/bg-pattern-bottom-mobile.svg) right bottom no-repeat;
+  }
+  .social-proof__ratings li {
+    margin-left: 0 !important;
+  }
+  .social-proof__ratings li::before {
+    display: block;
+    margin: auto auto 16px;
+  }
+}
+@media (max-width: 576px) {
+  .social-proof__container {
+    padding: 80px 24px;
+  }
+  .social-proof__heading h1 {
+    font-size: 2.133rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .social-proof__ratings {
+    width: 100%;
+  }
+  .social-proof__ratings li {
+    width: 100%;
+  }
 }
